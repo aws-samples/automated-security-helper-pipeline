@@ -23,7 +23,7 @@ The solution will scan new commits using [ASH](https://github.com/aws-samples/au
 1. Push your code into the CodeCommit repository
 2. Wait
 3. Review the report stored in S3
-4. You will get a SecurityHub alert in case the scan will fail.
+4. You will get a SecurityHub alert in case the scan will fail
 
 ## Security
 See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
