@@ -12,9 +12,9 @@ The solution will scan new commits using [ASH](https://github.com/aws-samples/au
 2. [CDK](https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html)
 
 ### Install
-1. Clone this repo
-2. Install pip requirements (recommended to create/use a dedicated virtual env)
-3. ```cdk bootstap```
+1. Clone this repo ```git clone https://github.com/aws-samples/automated-security-helper-pipeline```
+2. ```pip install -r requirements.txt``` (recommended to create/use a dedicated virtual env)
+3. ```cdk bootstrap```
 4. ```cdk deploy```(with default values) or ```cdk deploy --context repo_name=${repo_name_to_create}```
 
 
