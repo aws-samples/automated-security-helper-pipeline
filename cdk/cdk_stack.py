@@ -5,7 +5,6 @@
 # Amazon Web Services, Inc. or Amazon Web Services EMEA SARL or both.
 
 from constructs import Construct
-from cdk_nag import NagSuppressions
 from aws_cdk import (
     Aws,
     Duration,
@@ -22,12 +21,6 @@ class AshPipline(Stack):
 
     def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
-        # Supressing Errors
-        NagSuppressions.add_stack_suppressions(self, [{"id":"AwsSolutions-IAM5", "reason":"Policies that is being created by CFN"}])
-        NagSuppressions.add_stack_suppressions(self, [{"id":"AwsSolutions-S1", "reason":"Not needed at this time"}])
-        NagSuppressions.add_stack_suppressions(self, [{"id":"AwsSolutions-KMS5", "reason":"The bucket artifect is by default using KMS MANAGED"}])
-        # Supressing Warnings
-        NagSuppressions.add_stack_suppressions(self, [{"id":"AwsSolutions-CB3", "reason":"This is needed for ASH pipeline to run"}])
         
         # S3 Bucket which will be used to store the reports
         repo_name = self.node.try_get_context("repo_name")
